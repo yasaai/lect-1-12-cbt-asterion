@@ -526,40 +526,45 @@ explain:"Masase dulu."
 ];
 
 function startQuiz(){
-home.style.display="none";
-quizContainer.style.display="block";
-load();
+document.getElementById("home").style.display="none";
+document.getElementById("quizContainer").style.display="block";
+loadQuestion();
 }
 
-function load(){
+function loadQuestion(){
 answered=false;
-explain.style.display="none";
-let q=questions[current];
-question.innerText=q.q;
+document.getElementById("explain").style.display="none";
+
+let q = questions[current];
+document.getElementById("question").innerText = q.q;
 
 let html="";
-q.options.forEach((o,i)=>{
-html+=`<label><input type="radio" name="opt" onclick="check(${i})"> ${String.fromCharCode(65+i)}. ${o}</label>`;
+q.options.forEach((opt,i)=>{
+html+=`
+<label>
+<input type="radio" name="opt" onclick="check(${i})">
+${String.fromCharCode(65+i)}. ${opt}
+</label>`;
 });
-options.innerHTML=html;
+document.getElementById("options").innerHTML=html;
 }
 
 function check(i){
 if(answered) return;
 answered=true;
 
-let q=questions[current];
+let q = questions[current];
 let labels=document.querySelectorAll("label");
 
-labels.forEach((l,idx)=>{
-if(idx==q.answer) l.classList.add("correct");
-if(idx==i && i!=q.answer) l.classList.add("wrong");
+labels.forEach((l,index)=>{
+if(index==q.answer) l.classList.add("correct");
+if(index==i && i!=q.answer) l.classList.add("wrong");
 });
 
 if(i==q.answer) score++;
 
-explain.style.display="block";
-explain.innerText="Penjelasan: "+q.explain;
+document.getElementById("explain").style.display="block";
+document.getElementById("explain").innerText="Penjelasan: "+q.explain;
 }
 
 function next(){

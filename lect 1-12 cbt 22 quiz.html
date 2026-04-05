@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>CBT REPRO FULL</title>
+
+<style>
+body { font-family: Arial; background:#f5f5f5; }
+.container {
+    max-width:800px;
+    margin:auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    margin-top:40px;
+}
+.options label {
+    display:block;
+    margin:8px 0;
+    padding:10px;
+    border:1px solid #ddd;
+    border-radius:6px;
+    cursor:pointer;
+}
+.correct { background:#d4edda; }
+.wrong { background:#f8d7da; }
+.explain {
+    margin-top:10px;
+    background:#fff3cd;
+    padding:10px;
+    border-radius:6px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h3 id="question"></h3>
+<div id="options" class="options"></div>
+<div id="explain" class="explain" style="display:none;"></div>
+<br>
+<button onclick="next()">Next</button>
+</div>
+
+<script>
+let current=0;
+let score=0;
+let answered=false;
+
+let questions=[
+
+// ===== LECTURE 1 =====
+{
+q:"15. Bagian tersempit tuba uterina?",
+options:["Suspensory ligament","Inferoanterior","Uterotubal junction","Parametrium","Di atas ureter"],
+answer:2,
+explain:"Bagian tersempit = uterotubal junction."
+},
+{
+q:"52. Saraf di atas piriformis?",
+options:["Obturator","Sciatic","Pudendal","Superior gluteal","Inferior gluteal"],
+answer:3,
+explain:"Superior gluteal keluar di atas piriformis."
+},
+{
+q:"72. Asal vagina atas?",
+options:["Paramesonephric","Sinovaginal","Urogenital","Mesonephric","Ektoderm"],
+answer:0,
+explain:"Mullerian duct."
+},
+{
+q:"73. True conjugate?",
+options:["Atas symphysis","Bawah","Tengah","L5","SIAS"],
+answer:0,
+explain:"Atas symphysis ke promontorium."
+},
+
+// ===== LECTURE 2 =====
+{
+q:"4. Pembentukan testis?",
+options:["Paramesonephric","Leydig MIS","Cortical cord","Medullary cord","Tipis"],
+answer:3,
+explain:"Testis dari medullary cord."
+},
+{
+q:"59. Bukan perineum?",
+options:["Pubococcygeus","Bulbospongiosus","Ischiocavernosus","Deep transverse","External anal"],
+answer:0,
+explain:"Pubococcygeus bukan perineum."
+},
+{
+q:"76. Sisa Mullerian?",
+options:["Appendix testis","Appendix epididymis","Utriculus","Epigenital","Paragenital"],
+answer:0,
+explain:"Appendix testis."
+},
+{
+q:"82. Organ pria?",
+options:["Sertoli buat testosteron","DHT internal","Mullerian jadi vas","Genital tubercle → phallus","Epispadia"],
+answer:3,
+explain:"Tubercle → phallus."
+},
+
+// ===== LECTURE 3 =====
+{
+q:"53. Corpus luteum?",
+options:["Sebelum","Setelah ovulasi","Fertilisasi","Implantasi","Menstruasi"],
+answer:1,
+explain:"Setelah ovulasi."
+},
+{
+q:"60. Folikel sekunder?",
+options:["Oosit primer + cairan","Oosit sekunder","Primer saja","Selapis","Sekunder tanpa cairan"],
+answer:0,
+explain:"Sudah ada antrum."
+},
+
+// ===== LECTURE 4 =====
+{
+q:"31. Prostat?",
+options:["Kolumnar + otot polos uretra","Kelilingi vas","Otot skelet","Epitel pipih","Pars spongiosa"],
+answer:0,
+explain:"Mengelilingi uretra prostatika."
+},
+{
+q:"99. Vas deferens?",
+options:["Pseudostratified + stereocilia","Cilia","Transisional","Otot skelet","Kolumnar"],
+answer:0,
+explain:"Ciri khas stereocilia."
+},
+
+// ===== LECTURE 5 =====
+{
+q:"1. Spermatogenesis hormon?",
+options:["FSH","Testosteron","LH","GnRH","Estrogen"],
+answer:0,
+explain:"FSH → Sertoli."
+},
+{
+q:"68. Rambut pubertas?",
+options:["Androgen","Testosteron","FSH","LH","GnRH"],
+answer:0,
+explain:"Androgen effect."
+},
+
+// ===== LECTURE 6 =====
+{
+q:"9. Ovulasi?",
+options:["LH surge","FSH","Progesteron","Estrogen turun","Prolaktin"],
+answer:0,
+explain:"LH surge."
+},
+{
+q:"37. Fase luteal?",
+options:["Progesteron dominan","Estrogen dominan","GnRH","LH tinggi","Progesteron turun"],
+answer:0,
+explain:"Progesteron > estrogen."
+},
+
+// ===== LECTURE 7 =====
+{
+q:"6. Obstetric vs embryonic?",
+options:["Obstetric 2 minggu lebih awal","Embryonic lebih awal","Sama","4 minggu","Tidak pasti"],
+answer:0,
+explain:"Dari HPHT."
+},
+{
+q:"62. Down syndrome?",
+options:["Down","Turner","Edward","Patau","Klinefelter"],
+answer:0,
+explain:"Simian crease."
+},
+{
+q:"77. Konfirmasi janin?",
+options:["Amniosentesis","NIPT","Maternal","Serum","USG"],
+answer:0,
+explain:"Diagnosis pasti."
+},
+{
+q:"93. Minggu 2?",
+options:["Bilaminar","Trilaminar","Somite","Migrasi","Gastrulasi"],
+answer:0,
+explain:"Epiblast + hypoblast."
+},
+
+// ===== LECTURE 8 =====
+{
+q:"2. Payudara primigravida?",
+options:["Lebih menonjol","Lebih kecil","Tidak","Berikutnya","Sementara"],
+answer:0,
+explain:"Lebih jelas."
+},
+{
+q:"12. Amenorea pasti?",
+options:["<3","3-5","6-9",">10",">2 minggu"],
+answer:4,
+explain:">2 minggu."
+},
+{
+q:"27. EDD?",
+options:["+7 hari","-7","+7 bulan","-7 bulan","+3"],
+answer:0,
+explain:"Naegele."
+},
+{
+q:"95. Engagement?",
+options:["20","28","32","36","40"],
+answer:3,
+explain:"36 minggu."
+},
+
+// ===== LECTURE 9 =====
+{
+q:"30. Postmaturus?",
+options:["<20","28",">42","<500g",">4kg"],
+answer:2,
+explain:">42 minggu."
+},
+{
+q:"67. Presentasi occiput?",
+options:["Kepala bawah","Kepala atas","Bokong","Bahu","Lintang"],
+answer:0,
+explain:"Occiput = kepala."
+},
+{
+q:"83. Fase aktif nullipara?",
+options:["2.5","4.9","8","11.7","15"],
+answer:3,
+explain:"±11.7 jam."
+},
+{
+q:"88. Immaturus?",
+options:["20-24","24-28","28-32","32-36","36-40"],
+answer:1,
+explain:"24–28 minggu."
+},
+
+// ===== LECTURE 10 =====
+{
+q:"7. Tidak perlu rujuk?",
+options:["Nyeri saja","Benjolan","Abses","Postmenopause","Cairan >50"],
+answer:0,
+explain:"Fisiologis."
+},
+{
+q:"20. ANDI bukan growth?",
+options:["Makrokista","Fibroadenoma","Hipertrofi","Mastalgia","Nodul"],
+answer:0,
+explain:"Makrokista fase involusi."
+},
+{
+q:"42. Fibroadenoma?",
+options:["Excision","Tidak","Intracapsular","Jika besar","Permintaan"],
+answer:0,
+explain:"Excision."
+},
+{
+q:"75. Keluhan tersering?",
+options:["Benjolan","Inflamasi","Nyeri","Cairan","Distorsi"],
+answer:2,
+explain:"Mastalgia paling sering."
+},
+
+// ===== LECTURE 11 =====
+{
+q:"19. Kelainan 12%?",
+options:["Balanced","Robertsonian","Turner","Klinefelter","Trisomy21"],
+answer:1,
+explain:"Robertsonian."
+},
+{
+q:"28. Gonore & klamidia?",
+options:["Tidak","Antibiotik","Diabaikan","Tidak penting","Tidak tindakan"],
+answer:1,
+explain:"Harus diobati."
+},
+{
+q:"70. >10 minggu abortus?",
+options:["Tetap","Keluar bersama","Jarang","Janin keluar dulu","Plasenta keluar"],
+answer:3,
+explain:"Janin keluar dulu."
+},
+{
+q:"79. Cegah alloimunisasi?",
+options:["Paracetamol","Bed rest","Anti-D","NSAID","Evakuasi"],
+answer:2,
+explain:"Anti-D."
+},
+
+// ===== LECTURE 12 =====
+{
+q:"5. PPH awal?",
+options:["Masase","Cek plasenta","Infus","Rujuk","Bantuan"],
+answer:0,
+explain:"Masase uterus."
+},
+{
+q:"10. Abortus iminens?",
+options:["Iminens","Insipiens","Inkomplet","Missed","Ektopik"],
+answer:0,
+explain:"Serviks tertutup."
+},
+{
+q:"14. Preeklampsia berat?",
+options:["Eklampsia","Preeklampsia berat","Ringan","Gestasional","Superimposed"],
+answer:1,
+explain:"TD tinggi + proteinuria."
+},
+{
+q:"92. Plasenta belum lahir?",
+options:["Infus","Masase + meneran","Manual","Oksitosin","Methergin"],
+answer:1,
+explain:"Masase dulu."
+}
+
+];
+
+function load(){
+answered=false;
+document.getElementById("explain").style.display="none";
+
+let q=questions[current];
+document.getElementById("question").innerText=q.q;
+
+let html="";
+q.options.forEach((opt,i)=>{
+html+=`
+<label>
+<input type="radio" name="opt" onclick="check(${i})">
+${String.fromCharCode(65+i)}. ${opt}
+</label>`;
+});
+document.getElementById("options").innerHTML=html;
+}
+
+function check(i){
+if(answered) return;
+answered=true;
+
+let q=questions[current];
+let labels=document.querySelectorAll("label");
+
+labels.forEach((l,index)=>{
+if(index==q.answer) l.classList.add("correct");
+if(index==i && i!=q.answer) l.classList.add("wrong");
+});
+
+if(i==q.answer) score++;
+
+document.getElementById("explain").style.display="block";
+document.getElementById("explain").innerText="Penjelasan: "+q.explain;
+}
+
+function next(){
+current++;
+if(current<questions.length){
+load();
+}else{
+document.body.innerHTML=`<h2 style="text-align:center;">SELESAI 🎉<br>Score: ${score}/${questions.length}</h2>`;
+}
+}
+
+load();
+</script>
+
+</body>
+</html>

@@ -274,535 +274,535 @@
     const nextBtn = document.getElementById("nextBtn");
 
     const questions = [
-      {
-        q: "15. Mana pernyataan yang benar di bawah ini tentang anatomi organ panggul pada wanita?",
-        options: [
-          "Ovarium difiksasi oleh suspensory ligament dengan uterus",
-          "Posisi ovarium berada di inferoanterior dari tube uterina",
-          "Lumen tuba uterina yang paling sempit berada pada bagian uterotubal junction",
-          "Uterus dibagi menjadi: endometrium, myometrium dan parametrium",
-          "Vaskularisasi uterus adalah uterine artery, yang posisinya berada di atas ureter"
-        ],
-        answer: 2,
-        explain: "Bagian tersempit tuba uterina adalah uterotubal junction."
-      },
-      {
-        q: "52. Apakah cabang sacral plexus yang keluar dari pelvis, dan melewati the greater sciatic foramen di atas m.piriformis?",
-        options: [
-          "Obturator nerve",
-          "Sciatic nerve",
-          "Pudendal nerve",
-          "Superior gluteal nerve",
-          "Inferior gluteal nerve"
-        ],
-        answer: 3,
-        explain: "Superior gluteal nerve keluar di atas piriformis."
-      },
-      {
-        q: "72. Dari mana vagina bagian atas pada wanita berasal secara embryologi?",
-        options: [
-          "Bagian atas dari paramesonephric ducts",
-          "Bagian tengah dari paramesonephric ducts",
-          "Bagian bawah dari paramesonephric ducts",
-          "Sinovaginal bulbs",
-          "Urogenital sinus"
-        ],
-        answer: 0,
-        explain: "Vagina atas berasal dari Mullerian duct."
-      },
-      {
-        q: "73. Apa yang dimaksud dengan true (obstretic) conjugate?",
-        options: [
-          "Jarak antara bagian atas dalam symphysis pubis dengan promontorium",
-          "Jarak antara bagian bawah dalam symphysis pubis dengan promontorium",
-          "Jarak antara bagian tengah dalam symphysis pubis dengan promontorium",
-          "Jarak antara processus spinosus lumbal lima dengan promontorium",
-          "Jarak antara spina iliaca anterior superior kanan dan kiri"
-        ],
-        answer: 2,
-        explain: "True conjugate dari symphysis bagian atas ke promontorium."
-      },
-      {
-        q: "4. Mana pernyataan yang benar bila testis terbentuk?",
-        options: [
-          "Paramesonephric duct yang berkembang",
-          "Adanya MIS yang dihasilkan oleh sel Leydig",
-          "Cortical cord berkembang",
-          "Medullary cord berkembang",
-          "Terdapat tunica albigenia yang tebal"
-        ],
-        answer: 3,
-        explain: "Testis berkembang dari medullary cord."
-      },
-      {
-        q: "59. Otot yang 'tidak' ikut membentuk perineum?",
-        options: [
-          "Pubococcygeus",
-          "Bulbospongiosus",
-          "Ischiocavernosus",
-          "Deep transverse perineal",
-          "External anal sphincter"
-        ],
-        answer: 0,
-        explain: "Pubococcygeus termasuk pelvic floor."
-      },
-      {
-        q: "76. Apa organ di bawah ini yang merupakan sisa-sisa paramesonephric (Mullerian) duct?",
-        options: [
-          "Appendix testis",
-          "Appendix epididymis",
-          "Utriculus epididymis",
-          "Epigenital tubules",
-          "Paragenital tubules"
-        ],
-        answer: 0,
-        explain: "Appendix testis adalah sisa Mullerian duct."
-      },
-      {
-        q: "82. Mana pernyataan yang benar di bawah ini mengenai pembentukan organ reproduksi pria?",
-        options: [
-          "Mullerian inhibiting substance (MIS) dan testosteron diproduksi oleh sel Sertoli",
-          "Dehidrotestosteron akan membentuk internal genital organs",
-          "Paramesonephric duct akan membentuk vas defferent dan epididymis",
-          "Genital tubercle yang terbentuk nantinya akan menjadi phallus",
-          "Urethral fold yang tidak menutup menyebabkan terjadinya epispadia"
-        ],
-        answer: 3,
-        explain: "Genital tubercle berkembang menjadi phallus."
-      },
-      {
-        q: "53. Manakah pernyataan dibawah ini yang benar untuk corpus luteum?",
-        options: [
-          "Dibentuk oleh granulosa lutein cells dan theca lutein cells setelah folikel mengalami ovulasi",
-          "Dibentuk sebelum ovulasi",
-          "Dibentuk setelah hCG",
-          "Dibentuk setelah fertilisasi",
-          "Dibentuk setelah implantasi"
-        ],
-        answer: 0,
-        explain: "Corpus luteum terbentuk setelah ovulasi."
-      },
-      {
-        q: "60. Manakah pernyataan dibawah ini yang benar untuk folikel sekunder?",
-        options: [
-          "Disusun oleh oosit primer, dibungkus oleh sel epitel berlapis kubus dan ada ruangan diantaranya yang diisi dengan cairan follikuler.",
-          "Disusun oleh oosit sekunder, dibungkus oleh sel epitel berlapis kubus dan ada ruangan diantaranya yang diisi dengan cairan follikuler.",
-          "Disusun oleh oosit primer, dibungkus oleh sel epitel berlapis kubus",
-          "Disusun oleh oosit primer, dibungkus oleh sel epitel selapis kubus",
-          "Disusun oleh oosit sekunder, dibungkus oleh sel epitel berlapis kubus"
-        ],
-        answer: 0,
-        explain: "Folikel sekunder sudah memiliki antrum."
-      },
-      {
-        q: "31. Manakah pernyataan di bawah ini yang benar tentang kelenjar Prostat?",
-        options: [
-          "Parenkim berupa sel selapis kolumnar dengan stroma mengandung banyak sel otot polos yang melingkari uretra",
-          "Parenkim berupa sel selapis kolumnar dengan stroma mengandung banyak sel otot polos yang melingkari vas deferens",
-          "Parenkim berupa sel selapis kolumnar dengan stroma mengandung banyak sel otot skelet yang melingkari uretra",
-          "Parenkim berupa sel selapis pipih dengan stroma mengandung banyak sel otot polos yang melingkari uretra",
-          "Parenkim berupa sel selapis kolumnar dengan stroma mengandung banyak sel otot polos yang melingkari uretra pars spongiosa"
-        ],
-        answer: 0,
-        explain: "Prostat mengelilingi uretra prostatika."
-      },
-      {
-        q: "99. Manakah pernyataan dibawah ini benar tentang vas deferens?",
-        options: [
-          "Mukosa dilapisi oleh epitel kolumnar berlapis semu yang memiliki stereocilia, pada luarnya dilapisi oleh otot polos yang tebal dan jaringan ikat",
-          "Mukosa dilapisi oleh epitel kolumnar yang memiliki cilia, pada luarnya dilapisi oleh otot polos yang tebal dan jaringan ikat",
-          "Mukosa dilapisi oleh epitel transisional, pada luarnya dilapisi oleh otot polos yang tebal dan jaringan ikat",
-          "Mukosa dilapisi oleh epitel kolumnar berlapis semu yang memiliki stereocilia, pada luarnya dilapisi oleh etet skelet yang tebal dan jaringan ikat",
-          "Mukosa dilapisi oleh epitel berlapis kolumnar, pada luarnya dilapisi oleh otot polos yang tebal dan jaringan ikat"
-        ],
-        answer: 0,
-        explain: "Ciri khas: stereocilia."
-      },
-      {
-        q: "1. Perkembangan sel sperma dari spermatogonium menjadi spermatocyt dirangsang oleh hormon yang dihasilkan oleh kelenjar hipofise yaitu?",
-        options: ["FSH", "Testosterone", "LH", "GnRH", "Androgen"],
-        answer: 0,
-        explain: "FSH merangsang sel Sertoli."
-      },
-      {
-        q: "68. Seorang pria yang mengalami pubertas akan mengalami fase perubahan suara, pertumbuhan rambut di tempat-tempat tertentu dan mimpi basah, khusus untuk pertumbuhan rambut-rambut tersebut dikendalikan oleh hormone?",
-        options: ["Androgen", "Testosterone", "FSH", "LH", "GnRH"],
-        answer: 1,
-        explain: "Rambut dipengaruhi testosterone."
-      },
-      {
-        q: "9. Saat periode ovulasi Dina yang normal, yaitu pada siklus bulanan ovarium 28 hari. Sehingga dapat diperkirakan masa ovulasi Dina jatuh pada hari ke-14 setelah hari pertama terjadinya menstruasi. Berdasarkan pernyataan tersebut, sehubungan dengan ovulasi, yang merupakan pernyataan benar di bawah adalah",
-        options: [
-          "Sekitar 2 hari sebelum ovulasi, tingkat sekresi LH oleh kelenjar hipofisis anterior meningkat secara signifikan, naik sebesar 6 hingga 10 kali lipat",
-          "Pada periode ini, sekresi estrogen dan progesteron yang terhenti secara tiba-tiba menyebabkan pelepasan ovum, sel-sel granulosa dan theca interna dari folikel",
-          "FSH yang menurun menyebabkan swelling pada folikel selama beberapa hari sebelum ovulasi",
-          "EPerubahan sel-sel granulosa dan theca interna menjadi folikel matur sangat tergantung dari LH yang disekresikan oleh kelenjar pituitary anterior",
-          "FSH mengakibatkan sekresi progesteron dan swelling lebih lanjut pada folikel serta menyebabkan degenerasi stigma yang diperlukan dalam proses ovulasi"
-        ],
-        answer: 0,
-        explain: "LH surge memicu ovulasi."
-      },
-      {
-        q: "37. Secara fisiologis pada fase luteal perubahan folikel menjadi struktur corpus luteum berhubungan dengan pernyataan berikut?",
-        options: [
-          "Sel granulosa dalam corpus luteum membentuk reticulum endoplasmic yang progresif yang memproduksi hormon progesteron dan estrogen dalam jumlah banyak, dan jumlah hormon progesteron lebih tinggi dibanding estrogen.",
-          "Terjadi pertumbuhan corpus luteum menjadi folikel antrum yang dominan mensekresikan hormone estrogen dibawah pengaruh hormon FSH yang disekresikan oleh hipofisis anterior",
-          "Perubahan sel-sel granulosa dan theca interna menjadi sel-sel lutein sangat bergantung pada GnRH yang disekresikan oleh kelenjar pituitary anterior",
-          "Progesteron yang disekresikan oleh corpus luteum selama fase luteal memiliki feedback yang kuat terhadap kelenjar pituitary anterior dalam mempertahankan tingkat sekresi LH yang tinggi",
-          "Dalam tahap awal fase ini, berhentinya sekresi progesteron oleh corpus luteum menimbulkan penurunan jumlah FSH"
-        ],
-        answer: 0,
-        explain: "Progesteron dominan."
-      },
-      {
-        q: "6. Terdapat perbedaan waktu/penanggalan antara embryonic date dengan obstetric date dimana embryonic date dihitung sejak terjadinya fertilisasi oosit oleh sperma. Berapa lamakah perbedaan antara embryonic date dengan obstetric date?",
-        options: [
-          "Obstetric date 2 minggu lebih awal dibanding embryonic date",
-          "Embryonic date 2 minggu lebih awal dibanding obstetric date",
-          "Embryonic date 4 minggu lebih awal dibanding obstetric date",
-          "Obstetric date 3 minggu lebih awal dibanding embryonic date",
-          "Obstetric date 4 minggu lebih awal dibanding embryonic date"
-        ],
-        answer: 0,
-        explain: "Obstetric dihitung dari HPHT."
-      },
-      {
-        q: "62. Seorang ibu membawa anak laki-lakinya dengan kecerdasan yang kurang (IQ sekitar 50) dan tinggi badan rata-rata yang pendek dari anak sebaya. Dari pemeriksaan anda menemukan adanya tanda simbian crease (lipatan simbian) pada telapak tangan, almond shape eyes dan pada pergerakan mata ditemukan strabismus (juling). Apa kemungkinan kelainan genetik pada anak ini?",
-        options: ["Down syndrome", "Turner syndrome", "Edward syndrome", "Patau syndrome", "Klinefelter syndrome"],
-        answer: 0,
-        explain: "Down syndrome."
-      },
-      {
-        q: "77. Seorang perempuan usia 41 tahun datang dalam keadaan hamil trimester kedua. Perempuan ini menderita diabetes mellitus type II. Pada Ultrasonography (USG) ditemukan tanda-tanda kelainan pada fetus seperti penebalan pada nuchal fold, hyperechoic bowel dan short femur. Apa langkah terbaik yang anda lakukan untuk memastikan terdapatnya kelainan pada fetus?",
-        options: [
-          "Amniocentesis",
-          "test NIPT (non-invasive perinatal testing)",
-          "Maternal genetic test",
-          "Serum screening test",
-          "USG ulang"
-        ],
-        answer: 0,
-        explain: "Diagnosis pasti = amniocentesis."
-      },
-      {
-        q: "93. Apa peristiwa penting terjadi pada perkembangan minggu kedua dari perkembangan embrio?",
-        options: [
-          "Terbentuknya bilaminar germ disc (Inner cell mass: epiblast and hypoblast",
-          "Terbentuknya trilaminar germ disc (lapisan ektoderm, mesoderm dan endoderm)",
-          "Terbentuknya somites",
-          "Terdapatnya migrasi dari sel untuk membentuk bagian ventral dan dorsal embrio",
-          "Terbentuknya gastrulation"
-        ],
-        answer: 0,
-        explain: "Epiblast dan hypoblast."
-      },
-      {
-        q: "2. Bagaimana karakteristik perubahan anatomi pada payudara selama kehamilan pertama?",
-        options: [
-          "Perubahan payudara lebih menonjol pada kehamilan pertama dibandingkan dengan kehamilan berikutnya",
-          "Perubahan yang lebih kecil dibandingkan dengan kehamilan berikutnya",
-          "Tidak ada perubahan yang terjadi pada kehamilan pertama",
-          "Perubahan yang hanya terjadi pada kehamilan berikutnya",
-          "Perubahan yang hanya terjadi pada kehamilan berikutnya"
-        ],
-        answer: 0,
-        explain: "Primigravida lebih jelas."
-      },
-      {
-        q: "12. Berapa lama waktu yang dibutuhkan sebelum amenorea bisa menjadi tanda pasti kehamilan?",
-        options: [
-          "<3 hari setelah haid diharapkan",
-          "antara 3-5 hari setelah haid diharapkan",
-          "antara 6-9 hari setelah haid diharapkan",
-          ">10 hari setelah haid diharapkan",
-          ">2 minggu setelah haid diharapkan"
-        ],
-        answer: 4,
-        explain: ">2 minggu."
-      },
-      {
-        q: "27. Pernyataan yang benar dari cara menghitung estimasi tanggal persalinan (EDD) berdasarkan haid terakhir (LMP)?",
-        options: [
-          "Menambahkan 7 hari ke tanggal LMP",
-          "Mengurangkan 7 hari dari tanggal LMP",
-          "Menambahkan 7 bulan ke tanggal LMP",
-          "Mengurangkan 7 bulan dari tanggal LMP",
-          "Menambahkan 3 hari ke tanggal LMP"
-        ],
-        answer: 0,
-        explain: "Naegele rule."
-      },
-      {
-        q: "95. Kapan kepala bayi biasanya menetap atau engaged dalam panggul ibu?",
-        options: ["20 minggu", "28 minggu", "32 minggu", "36 minggu", "40 minggu"],
-        answer: 3,
-        explain: "Nullipara ±36 minggu."
-      },
-      {
-        q: "30. Apa yang menjadi karakteristik Partus postmaturus?",
-        options: [
-          "Bayi lahir sebelum 20 minggu usia kehamilan",
-          "Bayi lahir setelah 28 minggu usia kehamilan",
-          "Bayi lahir setelah 42 minggu usia kehamilan",
-          "Bayi lahir dengan berat badan kurang dari 500 gram",
-          "Bayi lahir dengan berat badan lebih dari 4 kilogram"
-        ],
-        answer: 2,
-        explain: ">42 minggu."
-      },
-      {
-        q: "67. Apa yang dimaksud dengan presentasi occiput dalam konteks persalinan normal?",
-        options: [
-          "Bayi lahir dengan kepala menghadap ke bawah",
-          "Bayi lahir dengan kepala menghadap ke atas",
-          "Bayi lahir dengan bokong menghadap ke bawah",
-          "Bayi lahir dengan bokong menghadap ke bawa",
-          "Bayi lahir dengan posisi melintang"
-        ],
-        answer: 0,
-        explain: "Occiput = kepala."
-      },
-      {
-        q: "83. Berapa rata-rata durasi fase aktif persalinan pada nullipara?",
-        options: ["2.5 jam", "4.9 jam", "8 jam", "11.7 jam", "15 jam"],
-        answer: 3,
-        explain: "Rata-rata 11.7 jam."
-      },
-      {
-        q: "88. Berapa rentang usia kehamilan pada Partus immaturus?",
-        options: ["20-24 minggu", "24-28 minggu", "28-32 minggu", "32-36 minggu", "36-40 minggu"],
-        answer: 0,
-        explain: "20-24 minggu."
-      },
-      {
-        q: "7. Kelainan-kelainan payudara tersebut dibawah ini tidak memerlukan rujukan ke rumah sakit adalah?",
-        options: [
-          "Nyeri payudara tanpa disertai adanya massa yang jelas biasanya fisiologis perubahan hormon",
-          "Jelas adanya benjolan baru yang muncul",
-          "Timbul abses payudara pada peradangan payudara yang tidak berhasil diatasi dengan pemberian antibiotika",
-          "Nyeri payudara yang menetap pada wanita postmenopause",
-          "Keluar cairan dari puting susu pada wanita diatas 50 tahun"
-        ],
-        answer: 0,
-        explain: "Fisiologis."
-      },
-      {
-        q: "20. Berdasarkan klasifikasi ANDI (Aberration of Normal breast Development and Involution), Kelainan-kelainan jinak tersebut dibawah ini yang bukan terjadi pada masa pertumbuhan payudara adalah?",
-        options: [
-          "Makrokista",
-          "Fibroadenoma",
-          "Hipertrofi juvenil",
-          "Mastalgia sistika",
-          "Nodul"
-        ],
-        answer: 0,
-        explain: "Makrokista fase involusi."
-      },
-      {
-        q: "42. Tindakan pengobatan yang paling tepat untuk fibroadenoma mamma adalah?",
-        options: [
-          "Dilakukan Extracapsular excision",
-          "Tidak perlu dilakukan excisi tumor",
-          "Intracapsular excision",
-          "Disarankan untuk dilakukan excisi bila bertambah besar",
-          "Dilakukan excisi atas permintaan pasien"
-        ],
-        answer: 0,
-        explain: "Excision."
-      },
-      {
-        q: "75. Keluhan payudara yang paling sering dijumpai pada pasien-pasien yang datang ke klinik payudara adalah?",
-        options: [
-          "Benjolan pada payudara",
-          "Benjolan pada payudara",
-          "Nyeri payudara",
-          "Keluar cairan dari puting payudara",
-          "Distorsi payudara"
-        ],
-        answer: 2,
-        explain: "Nyeri (mastalgia)."
-      },
-      {
-        q: "19. Question 19: Apa kelainan kromosom yang menyumbang 12% dari parenteral abnormalities?",
-        options: [
-          "Balanced reciprocal translocations",
-          "Robertsonian translocations",
-          "Turner syndrome",
-          "Klinefelter syndrome",
-          "Trisomy 21"
-        ],
-        answer: 1,
-        explain: "Robertsonian translocation."
-      },
-      {
-        q: "28. Apa yang dilakukan terhadap infeksi gonore dan klamidia dalam proses evaluasi dan pengobatan?",
-        options: [
-          "Tidak diobati karena seringkali bersifat asimtomatik",
-          "Antibiotik diberikan untuk mengobati infeksi",
-          "Infeksi diabaikan karena tidak berpengaruh pada kehamilan",
-          "Infeksi diabaikan karena tidak memiliki pengaruh yang signifikan terhadap ibu",
-          "Tidak ada tindakan yang diambil terhadap infeksi"
-        ],
-        answer: 1,
-        explain: "Harus diobati."
-      },
-      {
-        q: "70. Apa yang biasanya terjadi pada janin dan plasenta setelah mencapai kehamilan 10 minggu?",
-        options: [
-          "Mereka tetap di dalam rahim tanpa perubahan",
-          "Mereka seringkali dieksplusi bersama melalui os yang terbuka",
-          "Mereka seringkali dieksplusi bersama melalui os yang terbuka",
-          "Janin seringkali dieksplusi, tetapi plasenta tetap di dalam rahim",
-          "Plasenta seringkali dieksplusi, tetapi janin tetap di dalam rahim"
-        ],
-        answer: 3,
-        explain: "Janin keluar dulu."
-      },
-      {
-        q: "79. Apa yang dilakukan untuk mencegah alloimunisasi pada wanita Rh D-negatif setelah keguguran spontan?",
-        options: [
-          "Pemberian acetaminophen",
-          "Istirahat di tempat tidur",
-          "Anti-D immunoglobulin",
-          "Pemberian obat antiinflamasi",
-          "Evakuasi kehamilan"
-        ],
-        answer: 2,
-        explain: "Anti-D."
-      },
-      {
-        q: "5. Bila terjadi perdarahan segera setelah plasenta lahir, tindakan pertama yang anda lakukan adalah?",
-        options: [
-          "Masase uterus",
-          "Lihat kembali plasenta untuk memastikan plasenta lahir lengkap",
-          "Infus",
-          "Rujuk",
-          "Minta bantuan"
-        ],
-        answer: 0,
-        explain: "Masase uterus."
-      },
-      {
-        q: "10. Seorang wanita usia 23 tahun datang dengan keluhan mengalami perdarahan pervaginam dengan warna merah kehitaman, tidak ada nyeri, HPHT 6 minggu dan perdarahan muncul sejak 5 hari yang lalu setelah koitus. Pemeriksaan VT didapatkan bercak darah di OUE, tidak ada jaringan, uterus menutup. Diagnosis yang mungkin terjadi?",
-        options: [
-          "Abortus iminens",
-          "Abortus Insipiens",
-          "Abortus Inkomplet",
-          "Missed abortion",
-          "Kehamilan Ektopik"
-        ],
-        answer: 0,
-        explain: "Serviks tertutup."
-      },
-      {
-        q: "14. Seorang pasien wanita usia 25 tahun dengan G1P0A0 dan usia kehamilan 7 bulan, telah dilakukan pemeriksaan sebanyak 3 kali di bidan dan dinyatakan dalam keadaan normal (tidak memiliki penyakit serius). Dari hasil pemeriksaan menunjukkan tekanan darah 160/110 mmHg, leopold letak sungsang, tinggi fundus uteri 28 cm, denyut jantung janin 150x per menit, protein urine (+++), dan terjadi edema berat pada tungkai bawah. Apakah diagnosis yang memungkinkan ?",
-        options: [
-          "Eklampsia",
-          "Preeklampsia berat",
-          "Preeklamsia Ringan",
-          "Hipertensi Gestasional",
-          "Superimposed preeklampsia"
-        ],
-        answer: 1,
-        explain: "TD tinggi + proteinuria."
-      },
-      {
-        q: "92. Bila 15 menit setelah bayi lahir dan sudah dilakukan penatalaksanaan aktif persalinan kala tiga plasenta belum lahir, maka tindakan yang pertama kali anda lakukan adalah:",
-        options: [
-          "Memeriksa tanda-tanda vital, mulai memasang infus dan merujuk.",
-          "Melakukan masase fundus dan meminta ibu untuk meneran.",
-          "Lahirkan plasenta secara manual.",
-          "Memberikan 10 unit oksitosin intramuskular",
-          "Memberikan injeksi metylergometrin 1 amp intramuscular"
-        ],
-        answer: 1,
-        explain: "Masase dulu."
-      },
-      {
-  q: "11. Seorang pasien wanita usia 25 tahun dengan G1P0A0 dan usia kehamilan 7 bulan, telah dilakukan pemeriksaan sebanyak 3 kali di bidan dan dinyatakan dalam keadaan normal 'tidak memiliki penyakit serius'. Dari hasil pemeriksaan menunjukkan tekanan darah 160/110 mmHg, leopold letak sungsang, tinggi fundus uteri 28 cm, denyut jantung janin 150x per menit, protein urine +++, dan terjadi edema berat pada tungkai bawah. Apakah diagnosis yang memungkinkan ?",
-  options: [
-    "Preeklampsia berat",
-    "Eklampsia",
-    "Preeklampsia ringan",
-    "Hipertensi gestasional",
-    "Superimposed preeklampsia"
-  ],
-  answer: 0,
-  explain: "TD ≥160/110 + proteinuria + edema → preeklampsia berat."
-},
-{
-  q: "17. Seorang ibu hamil 7 bulan diantar keluarganya datang ke rumah sakit dengan keluhan sakit perut yang hilang timbul, setelah diperiksa oleh dokter disarankan untuk opname. Setelah dirawat selama 7 hari diputuskan untuk memberikan obat untuk mematangkan paru paru bayi. Obat apa yang berfungsi mematangkan paru?",
-  options: [
-    "Lithium",
-    "Antikonvulsan",
-    "Kortikosteroid",
-    "Hormon seks",
-    "Carbamazepine"
-  ],
-  answer: 2,
-  explain: "Kortikosteroid (misal betamethasone) → maturasi paru janin."
-},
-{
-  q: "26. Nyonya Wayan, 37 tahun, G4P3A0. Pasien dengan riwayat ANC teratur. TD saat ANC pertama pada umur kehamilan 8 minggu adalah 110/72 mmHg. Kemudian pada saat trimester III dan pada saat persalinan tekanan darahnya 146/92 mmHg. Hasil pemeriksaan proteinuria adalah negatif dan kadar serum kreatinin 0,76 mg/dL. Selanjutnya tekanan darah kembali normal setelah pasien dirawat selama 2 hari di Rumah Sakit.Diagnosis yang tepat untuk kasus di atas adalah?",
-  options: [
-    "Preeklampsia berat",
-    "Hipertensi kronis",
-    "Hipertensi gestasional",
-    "Superimposed preeklampsia",
-    "Preeklampsia ringan"
-  ],
-  answer: 2,
-  explain: "Hipertensi tanpa proteinuria dan hilang postpartum → hipertensi gestasional."
-},
-{
-  q: "29. preeklampsia berat/superimposed preeklampsia. Magnesium sulfat yang diberikan adalah MgSO4 40% yang diberikan 4 g intravena sebagai initial dose.Tanda klinis yang dapat digunakan untuk mendeteksi adanya kadar magnesium yang berlebih sebelum terjadinya depresi nafas adalah?",
-  options: [
-    "Nadi",
-    "Refleks patella",
-    "Klonus",
-    "Penglihatan",
-    "Babinski"
-  ],
-  answer: 1,
-  explain: "Refleks patella hilang = tanda awal toksisitas magnesium."
-},
-{
-  q: "50. Seorang wanita usia 28 tahun dengan riwayat G1P1A0 merasa hamil 24 minggu dan datang ke praktek umum dengan keluhan bahwa kehamilannya tidak bertambah besar. 6 minggu yang lalu terdapat bercak darah selama 3 hari tanpa nyeri dan berhenti secara spontan. Dari hasil pemeriksaan diperoleh TFU 2 jari bawah umbilikus dan DJJ (-).Diagnosis apa yang paling tepa?",
-  options: [
-    "Missed abortion",
-    "Abortus inkomplet",
-    "Abortus imminens",
-    "Abortus aseptik",
-    "Abortus komplet"
-  ],
-  answer: 0,
-  explain: "Janin sudah meninggal tapi belum keluar → missed abortion."
-},
-{
-  q: "85. Indonesia yang merupakan negara kepulauan menghadapi permasalahan dalam rujukan kasus Obstetri. Seringkali kasus-kasus rujukan setelah tiba di Rumah Sakit mengalami komplikasi korioamnionitis. Manakah pernyataan yang tepat terkait korioamnionitis dan dampaknya dalam persalinan?",
-  options: [
-    "Infeksi pada tahap awal persalinan menyebabkan gangguan persalinan",
-    "Infeksi pada kala II akhir sebagai akibat dari distosia yang terjadi pada kala I",
-    "Korioamnionitis sering dikaitkan dengan partus presipitatus",
-    "Tidak terkait distosia",
-    "Berhubungan dengan KPD dan persalinan lama"
-  ],
-  answer: 0,
-  explain: "Korioamnionitis paling sering berhubungan dengan persalinan prematur, ketuban pecah dini, persalinan lama, penggunaan tembakau, kehamilan nulipara, cairan ketuban bercampur mekonium, beberapa pemeriksaan vagina pasca ketuban pecah, dan pada wanita dengan infeksi bakteri atau virus yang diketahui.."
-},
-{
-  q: "87. Nyonya Kadek, 39 tahun, G4P2A1 usia kehamilan 34 minggu. Dirujukbidan karena pada pemeriksaan Leopold II didapatkan kepala di sisikanan Ibu. Penyebab tersering letak lintang adalah sebagai berikut?",
-  options: [
-    "Nuliparitas",
-    "Pemanjangan fase persalinan",
-    "Plasenta previa",
-    "Oligohidramnion",
-    "Ketuban pecah dini"
-  ],
-  answer: 2,
-  explain: "Plasenta previa mengganggu posisi janin sehingga sering menyebabkan letak lintang."
-}
-    ];
+  {
+    q: "1. Perkembangan sel sperma dari spermatogonium menjadi spermatocyt dirangsang oleh hormon yang dihasilkan oleh kelenjar hipofise yaitu?",
+    options: ["FSH", "Testosterone", "LH", "GnRH", "Androgen"],
+    answer: 0,
+    explain: "FSH merangsang sel Sertoli."
+  },
+  {
+    q: "2. Bagaimana karakteristik perubahan anatomi pada payudara selama kehamilan pertama?",
+    options: [
+      "Perubahan payudara lebih menonjol pada kehamilan pertama dibandingkan dengan kehamilan berikutnya",
+      "Perubahan yang lebih kecil dibandingkan dengan kehamilan berikutnya",
+      "Tidak ada perubahan yang terjadi pada kehamilan pertama",
+      "Perubahan yang hanya terjadi pada kehamilan berikutnya",
+      "Perubahan yang hanya terjadi pada kehamilan berikutnya"
+    ],
+    answer: 0,
+    explain: "Primigravida lebih jelas."
+  },
+  {
+    q: "4. Mana pernyataan yang benar bila testis terbentuk?",
+    options: [
+      "Paramesonephric duct yang berkembang",
+      "Adanya MIS yang dihasilkan oleh sel Leydig",
+      "Cortical cord berkembang",
+      "Medullary cord berkembang",
+      "Terdapat tunica albigenia yang tebal"
+    ],
+    answer: 3,
+    explain: "Testis berkembang dari medullary cord."
+  },
+  {
+    q: "5. Bila terjadi perdarahan segera setelah plasenta lahir, tindakan pertama yang anda lakukan adalah?",
+    options: [
+      "Masase uterus",
+      "Lihat kembali plasenta untuk memastikan plasenta lahir lengkap",
+      "Infus",
+      "Rujuk",
+      "Minta bantuan"
+    ],
+    answer: 0,
+    explain: "Masase uterus."
+  },
+  {
+    q: "6. Terdapat perbedaan waktu/penanggalan antara embryonic date dengan obstetric date dimana embryonic date dihitung sejak terjadinya fertilisasi oosit oleh sperma. Berapa lamakah perbedaan antara embryonic date dengan obstetric date?",
+    options: [
+      "Obstetric date 2 minggu lebih awal dibanding embryonic date",
+      "Embryonic date 2 minggu lebih awal dibanding obstetric date",
+      "Embryonic date 4 minggu lebih awal dibanding obstetric date",
+      "Obstetric date 3 minggu lebih awal dibanding embryonic date",
+      "Obstetric date 4 minggu lebih awal dibanding embryonic date"
+    ],
+    answer: 0,
+    explain: "Obstetric dihitung dari HPHT."
+  },
+  {
+    q: "7. Kelainan-kelainan payudara tersebut dibawah ini tidak memerlukan rujukan ke rumah sakit adalah?",
+    options: [
+      "Nyeri payudara tanpa disertai adanya massa yang jelas biasanya fisiologis perubahan hormon",
+      "Jelas adanya benjolan baru yang muncul",
+      "Timbul abses payudara pada peradangan payudara yang tidak berhasil diatasi dengan pemberian antibiotika",
+      "Nyeri payudara yang menetap pada wanita postmenopause",
+      "Keluar cairan dari puting susu pada wanita diatas 50 tahun"
+    ],
+    answer: 0,
+    explain: "Fisiologis."
+  },
+  {
+    q: "9. Saat periode ovulasi Dina yang normal, yaitu pada siklus bulanan ovarium 28 hari. Sehingga dapat diperkirakan masa ovulasi Dina jatuh pada hari ke-14 setelah hari pertama terjadinya menstruasi. Berdasarkan pernyataan tersebut, sehubungan dengan ovulasi, yang merupakan pernyataan benar di bawah adalah",
+    options: [
+      "Sekitar 2 hari sebelum ovulasi, tingkat sekresi LH oleh kelenjar hipofisis anterior meningkat secara signifikan, naik sebesar 6 hingga 10 kali lipat",
+      "Pada periode ini, sekresi estrogen dan progesteron yang terhenti secara tiba-tiba menyebabkan pelepasan ovum, sel-sel granulosa dan theca interna dari folikel",
+      "FSH yang menurun menyebabkan swelling pada folikel selama beberapa hari sebelum ovulasi",
+      "EPerubahan sel-sel granulosa dan theca interna menjadi folikel matur sangat tergantung dari LH yang disekresikan oleh kelenjar pituitary anterior",
+      "FSH mengakibatkan sekresi progesteron dan swelling lebih lanjut pada folikel serta menyebabkan degenerasi stigma yang diperlukan dalam proses ovulasi"
+    ],
+    answer: 0,
+    explain: "LH surge memicu ovulasi."
+  },
+  {
+    q: "10. Seorang wanita usia 23 tahun datang dengan keluhan mengalami perdarahan pervaginam dengan warna merah kehitaman, tidak ada nyeri, HPHT 6 minggu dan perdarahan muncul sejak 5 hari yang lalu setelah koitus. Pemeriksaan VT didapatkan bercak darah di OUE, tidak ada jaringan, uterus menutup. Diagnosis yang mungkin terjadi?",
+    options: [
+      "Abortus iminens",
+      "Abortus Insipiens",
+      "Abortus Inkomplet",
+      "Missed abortion",
+      "Kehamilan Ektopik"
+    ],
+    answer: 0,
+    explain: "Serviks tertutup."
+  },
+  {
+    q: "11. Seorang pasien wanita usia 25 tahun dengan G1P0A0 dan usia kehamilan 7 bulan, telah dilakukan pemeriksaan sebanyak 3 kali di bidan dan dinyatakan dalam keadaan normal 'tidak memiliki penyakit serius'. Dari hasil pemeriksaan menunjukkan tekanan darah 160/110 mmHg, leopold letak sungsang, tinggi fundus uteri 28 cm, denyut jantung janin 150x per menit, protein urine +++, dan terjadi edema berat pada tungkai bawah. Apakah diagnosis yang memungkinkan ?",
+    options: [
+      "Preeklampsia berat",
+      "Eklampsia",
+      "Preeklampsia ringan",
+      "Hipertensi gestasional",
+      "Superimposed preeklampsia"
+    ],
+    answer: 0,
+    explain: "TD ≥160/110 + proteinuria + edema → preeklampsia berat."
+  },
+  {
+    q: "12. Berapa lama waktu yang dibutuhkan sebelum amenorea bisa menjadi tanda pasti kehamilan?",
+    options: [
+      "<3 hari setelah haid diharapkan",
+      "antara 3-5 hari setelah haid diharapkan",
+      "antara 6-9 hari setelah haid diharapkan",
+      ">10 hari setelah haid diharapkan",
+      ">2 minggu setelah haid diharapkan"
+    ],
+    answer: 4,
+    explain: ">2 minggu."
+  },
+  {
+    q: "14. Seorang pasien wanita usia 25 tahun dengan G1P0A0 dan usia kehamilan 7 bulan, telah dilakukan pemeriksaan sebanyak 3 kali di bidan dan dinyatakan dalam keadaan normal (tidak memiliki penyakit serius). Dari hasil pemeriksaan menunjukkan tekanan darah 160/110 mmHg, leopold letak sungsang, tinggi fundus uteri 28 cm, denyut jantung janin 150x per menit, protein urine (+++), dan terjadi edema berat pada tungkai bawah. Apakah diagnosis yang memungkinkan ?",
+    options: [
+      "Eklampsia",
+      "Preeklampsia berat",
+      "Preeklamsia Ringan",
+      "Hipertensi Gestasional",
+      "Superimposed preeklampsia"
+    ],
+    answer: 1,
+    explain: "TD tinggi + proteinuria."
+  },
+  {
+    q: "15. Mana pernyataan yang benar di bawah ini tentang anatomi organ panggul pada wanita?",
+    options: [
+      "Ovarium difiksasi oleh suspensory ligament dengan uterus",
+      "Posisi ovarium berada di inferoanterior dari tube uterina",
+      "Lumen tuba uterina yang paling sempit berada pada bagian uterotubal junction",
+      "Uterus dibagi menjadi: endometrium, myometrium dan parametrium",
+      "Vaskularisasi uterus adalah uterine artery, yang posisinya berada di atas ureter"
+    ],
+    answer: 2,
+    explain: "Bagian tersempit tuba uterina adalah uterotubal junction."
+  },
+  {
+    q: "17. Seorang ibu hamil 7 bulan diantar keluarganya datang ke rumah sakit dengan keluhan sakit perut yang hilang timbul, setelah diperiksa oleh dokter disarankan untuk opname. Setelah dirawat selama 7 hari diputuskan untuk memberikan obat untuk mematangkan paru paru bayi. Obat apa yang berfungsi mematangkan paru?",
+    options: [
+      "Lithium",
+      "Antikonvulsan",
+      "Kortikosteroid",
+      "Hormon seks",
+      "Carbamazepine"
+    ],
+    answer: 2,
+    explain: "Kortikosteroid (misal betamethasone) → maturasi paru janin."
+  },
+  {
+    q: "19. Question 19: Apa kelainan kromosom yang menyumbang 12% dari parenteral abnormalities?",
+    options: [
+      "Balanced reciprocal translocations",
+      "Robertsonian translocations",
+      "Turner syndrome",
+      "Klinefelter syndrome",
+      "Trisomy 21"
+    ],
+    answer: 1,
+    explain: "Robertsonian translocation."
+  },
+  {
+    q: "20. Berdasarkan klasifikasi ANDI (Aberration of Normal breast Development and Involution), Kelainan-kelainan jinak tersebut dibawah ini yang bukan terjadi pada masa pertumbuhan payudara adalah?",
+    options: [
+      "Makrokista",
+      "Fibroadenoma",
+      "Hipertrofi juvenil",
+      "Mastalgia sistika",
+      "Nodul"
+    ],
+    answer: 0,
+    explain: "Makrokista fase involusi."
+  },
+  {
+    q: "26. Nyonya Wayan, 37 tahun, G4P3A0. Pasien dengan riwayat ANC teratur. TD saat ANC pertama pada umur kehamilan 8 minggu adalah 110/72 mmHg. Kemudian pada saat trimester III dan pada saat persalinan tekanan darahnya 146/92 mmHg. Hasil pemeriksaan proteinuria adalah negatif dan kadar serum kreatinin 0,76 mg/dL. Selanjutnya tekanan darah kembali normal setelah pasien dirawat selama 2 hari di Rumah Sakit.Diagnosis yang tepat untuk kasus di atas adalah?",
+    options: [
+      "Preeklampsia berat",
+      "Hipertensi kronis",
+      "Hipertensi gestasional",
+      "Superimposed preeklampsia",
+      "Preeklampsia ringan"
+    ],
+    answer: 2,
+    explain: "Hipertensi tanpa proteinuria dan hilang postpartum → hipertensi gestasional."
+  },
+  {
+    q: "27. Pernyataan yang benar dari cara menghitung estimasi tanggal persalinan (EDD) berdasarkan haid terakhir (LMP)?",
+    options: [
+      "Menambahkan 7 hari ke tanggal LMP",
+      "Mengurangkan 7 hari dari tanggal LMP",
+      "Menambahkan 7 bulan ke tanggal LMP",
+      "Mengurangkan 7 bulan dari tanggal LMP",
+      "Menambahkan 3 hari ke tanggal LMP"
+    ],
+    answer: 0,
+    explain: "Naegele rule."
+  },
+  {
+    q: "28. Apa yang dilakukan terhadap infeksi gonore dan klamidia dalam proses evaluasi dan pengobatan?",
+    options: [
+      "Tidak diobati karena seringkali bersifat asimtomatik",
+      "Antibiotik diberikan untuk mengobati infeksi",
+      "Infeksi diabaikan karena tidak berpengaruh pada kehamilan",
+      "Infeksi diabaikan karena tidak memiliki pengaruh yang signifikan terhadap ibu",
+      "Tidak ada tindakan yang diambil terhadap infeksi"
+    ],
+    answer: 1,
+    explain: "Harus diobati."
+  },
+  {
+    q: "29. preeklampsia berat/superimposed preeklampsia. Magnesium sulfat yang diberikan adalah MgSO4 40% yang diberikan 4 g intravena sebagai initial dose.Tanda klinis yang dapat digunakan untuk mendeteksi adanya kadar magnesium yang berlebih sebelum terjadinya depresi nafas adalah?",
+    options: [
+      "Nadi",
+      "Refleks patella",
+      "Klonus",
+      "Penglihatan",
+      "Babinski"
+    ],
+    answer: 1,
+    explain: "Refleks patella hilang = tanda awal toksisitas magnesium."
+  },
+  {
+    q: "30. Apa yang menjadi karakteristik Partus postmaturus?",
+    options: [
+      "Bayi lahir sebelum 20 minggu usia kehamilan",
+      "Bayi lahir setelah 28 minggu usia kehamilan",
+      "Bayi lahir setelah 42 minggu usia kehamilan",
+      "Bayi lahir dengan berat badan kurang dari 500 gram",
+      "Bayi lahir dengan berat badan lebih dari 4 kilogram"
+    ],
+    answer: 2,
+    explain: ">42 minggu."
+  },
+  {
+    q: "31. Manakah pernyataan di bawah ini yang benar tentang kelenjar Prostat?",
+    options: [
+      "Parenkim berupa sel selapis kolumnar dengan stroma mengandung banyak sel otot polos yang melingkari uretra",
+      "Parenkim berupa sel selapis kolumnar dengan stroma mengandung banyak sel otot polos yang melingkari vas deferens",
+      "Parenkim berupa sel selapis kolumnar dengan stroma mengandung banyak sel otot skelet yang melingkari uretra",
+      "Parenkim berupa sel selapis pipih dengan stroma mengandung banyak sel otot polos yang melingkari uretra",
+      "Parenkim berupa sel selapis kolumnar dengan stroma mengandung banyak sel otot polos yang melingkari uretra pars spongiosa"
+    ],
+    answer: 0,
+    explain: "Prostat mengelilingi uretra prostatika."
+  },
+  {
+    q: "37. Secara fisiologis pada fase luteal perubahan folikel menjadi struktur corpus luteum berhubungan dengan pernyataan berikut?",
+    options: [
+      "Sel granulosa dalam corpus luteum membentuk reticulum endoplasmic yang progresif yang memproduksi hormon progesteron dan estrogen dalam jumlah banyak, dan jumlah hormon progesteron lebih tinggi dibanding estrogen.",
+      "Terjadi pertumbuhan corpus luteum menjadi folikel antrum yang dominan mensekresikan hormone estrogen dibawah pengaruh hormon FSH yang disekresikan oleh hipofisis anterior",
+      "Perubahan sel-sel granulosa dan theca interna menjadi sel-sel lutein sangat bergantung pada GnRH yang disekresikan oleh kelenjar pituitary anterior",
+      "Progesteron yang disekresikan oleh corpus luteum selama fase luteal memiliki feedback yang kuat terhadap kelenjar pituitary anterior dalam mempertahankan tingkat sekresi LH yang tinggi",
+      "Dalam tahap awal fase ini, berhentinya sekresi progesteron oleh corpus luteum menimbulkan penurunan jumlah FSH"
+    ],
+    answer: 0,
+    explain: "Progesteron dominan."
+  },
+  {
+    q: "42. Tindakan pengobatan yang paling tepat untuk fibroadenoma mamma adalah?",
+    options: [
+      "Dilakukan Extracapsular excision",
+      "Tidak perlu dilakukan excisi tumor",
+      "Intracapsular excision",
+      "Disarankan untuk dilakukan excisi bila bertambah besar",
+      "Dilakukan excisi atas permintaan pasien"
+    ],
+    answer: 0,
+    explain: "Excision."
+  },
+  {
+    q: "50. Seorang wanita usia 28 tahun dengan riwayat G1P1A0 merasa hamil 24 minggu dan datang ke praktek umum dengan keluhan bahwa kehamilannya tidak bertambah besar. 6 minggu yang lalu terdapat bercak darah selama 3 hari tanpa nyeri dan berhenti secara spontan. Dari hasil pemeriksaan diperoleh TFU 2 jari bawah umbilikus dan DJJ (-).Diagnosis apa yang paling tepa?",
+    options: [
+      "Missed abortion",
+      "Abortus inkomplet",
+      "Abortus imminens",
+      "Abortus aseptik",
+      "Abortus komplet"
+    ],
+    answer: 0,
+    explain: "Janin sudah meninggal tapi belum keluar → missed abortion."
+  },
+  {
+    q: "52. Apakah cabang sacral plexus yang keluar dari pelvis, dan melewati the greater sciatic foramen di atas m.piriformis?",
+    options: [
+      "Obturator nerve",
+      "Sciatic nerve",
+      "Pudendal nerve",
+      "Superior gluteal nerve",
+      "Inferior gluteal nerve"
+    ],
+    answer: 3,
+    explain: "Superior gluteal nerve keluar di atas piriformis."
+  },
+  {
+    q: "53. Manakah pernyataan dibawah ini yang benar untuk corpus luteum?",
+    options: [
+      "Dibentuk oleh granulosa lutein cells dan theca lutein cells setelah folikel mengalami ovulasi",
+      "Dibentuk sebelum ovulasi",
+      "Dibentuk setelah hCG",
+      "Dibentuk setelah fertilisasi",
+      "Dibentuk setelah implantasi"
+    ],
+    answer: 0,
+    explain: "Corpus luteum terbentuk setelah ovulasi."
+  },
+  {
+    q: "59. Otot yang 'tidak' ikut membentuk perineum?",
+    options: [
+      "Pubococcygeus",
+      "Bulbospongiosus",
+      "Ischiocavernosus",
+      "Deep transverse perineal",
+      "External anal sphincter"
+    ],
+    answer: 0,
+    explain: "Pubococcygeus termasuk pelvic floor."
+  },
+  {
+    q: "60. Manakah pernyataan dibawah ini yang benar untuk folikel sekunder?",
+    options: [
+      "Disusun oleh oosit primer, dibungkus oleh sel epitel berlapis kubus dan ada ruangan diantaranya yang diisi dengan cairan follikuler.",
+      "Disusun oleh oosit sekunder, dibungkus oleh sel epitel berlapis kubus dan ada ruangan diantaranya yang diisi dengan cairan follikuler.",
+      "Disusun oleh oosit primer, dibungkus oleh sel epitel berlapis kubus",
+      "Disusun oleh oosit primer, dibungkus oleh sel epitel selapis kubus",
+      "Disusun oleh oosit sekunder, dibungkus oleh sel epitel berlapis kubus"
+    ],
+    answer: 0,
+    explain: "Folikel sekunder sudah memiliki antrum."
+  },
+  {
+    q: "62. Seorang ibu membawa anak laki-lakinya dengan kecerdasan yang kurang (IQ sekitar 50) dan tinggi badan rata-rata yang pendek dari anak sebaya. Dari pemeriksaan anda menemukan adanya tanda simbian crease (lipatan simbian) pada telapak tangan, almond shape eyes dan pada pergerakan mata ditemukan strabismus (juling). Apa kemungkinan kelainan genetik pada anak ini?",
+    options: ["Down syndrome", "Turner syndrome", "Edward syndrome", "Patau syndrome", "Klinefelter syndrome"],
+    answer: 0,
+    explain: "Down syndrome."
+  },
+  {
+    q: "67. Apa yang dimaksud dengan presentasi occiput dalam konteks persalinan normal?",
+    options: [
+      "Bayi lahir dengan kepala menghadap ke bawah",
+      "Bayi lahir dengan kepala menghadap ke atas",
+      "Bayi lahir dengan bokong menghadap ke bawah",
+      "Bayi lahir dengan bokong menghadap ke bawa",
+      "Bayi lahir dengan posisi melintang"
+    ],
+    answer: 0,
+    explain: "Occiput = kepala."
+  },
+  {
+    q: "68. Seorang pria yang mengalami pubertas akan mengalami fase perubahan suara, pertumbuhan rambut di tempat-tempat tertentu dan mimpi basah, khusus untuk pertumbuhan rambut-rambut tersebut dikendalikan oleh hormone?",
+    options: ["Androgen", "Testosterone", "FSH", "LH", "GnRH"],
+    answer: 1,
+    explain: "Rambut dipengaruhi testosterone."
+  },
+  {
+    q: "70. Apa yang biasanya terjadi pada janin dan plasenta setelah mencapai kehamilan 10 minggu?",
+    options: [
+      "Mereka tetap di dalam rahim tanpa perubahan",
+      "Mereka seringkali dieksplusi bersama melalui os yang terbuka",
+      "Mereka seringkali dieksplusi bersama melalui os yang terbuka",
+      "Janin seringkali dieksplusi, tetapi plasenta tetap di dalam rahim",
+      "Plasenta seringkali dieksplusi, tetapi janin tetap di dalam rahim"
+    ],
+    answer: 3,
+    explain: "Janin keluar dulu."
+  },
+  {
+    q: "72. Dari mana vagina bagian atas pada wanita berasal secara embryologi?",
+    options: [
+      "Bagian atas dari paramesonephric ducts",
+      "Bagian tengah dari paramesonephric ducts",
+      "Bagian bawah dari paramesonephric ducts",
+      "Sinovaginal bulbs",
+      "Urogenital sinus"
+    ],
+    answer: 0,
+    explain: "Vagina atas berasal dari Mullerian duct."
+  },
+  {
+    q: "73. Apa yang dimaksud dengan true (obstretic) conjugate?",
+    options: [
+      "Jarak antara bagian atas dalam symphysis pubis dengan promontorium",
+      "Jarak antara bagian bawah dalam symphysis pubis dengan promontorium",
+      "Jarak antara bagian tengah dalam symphysis pubis dengan promontorium",
+      "Jarak antara processus spinosus lumbal lima dengan promontorium",
+      "Jarak antara spina iliaca anterior superior kanan dan kiri"
+    ],
+    answer: 2,
+    explain: "True conjugate dari symphysis bagian atas ke promontorium."
+  },
+  {
+    q: "75. Keluhan payudara yang paling sering dijumpai pada pasien-pasien yang datang ke klinik payudara adalah?",
+    options: [
+      "Benjolan pada payudara",
+      "Benjolan pada payudara",
+      "Nyeri payudara",
+      "Keluar cairan dari puting payudara",
+      "Distorsi payudara"
+    ],
+    answer: 2,
+    explain: "Nyeri (mastalgia)."
+  },
+  {
+    q: "76. Apa organ di bawah ini yang merupakan sisa-sisa paramesonephric (Mullerian) duct?",
+    options: [
+      "Appendix testis",
+      "Appendix epididymis",
+      "Utriculus epididymis",
+      "Epigenital tubules",
+      "Paragenital tubules"
+    ],
+    answer: 0,
+    explain: "Appendix testis adalah sisa Mullerian duct."
+  },
+  {
+    q: "77. Seorang perempuan usia 41 tahun datang dalam keadaan hamil trimester kedua. Perempuan ini menderita diabetes mellitus type II. Pada Ultrasonography (USG) ditemukan tanda-tanda kelainan pada fetus seperti penebalan pada nuchal fold, hyperechoic bowel dan short femur. Apa langkah terbaik yang anda lakukan untuk memastikan terdapatnya kelainan pada fetus?",
+    options: [
+      "Amniocentesis",
+      "test NIPT (non-invasive perinatal testing)",
+      "Maternal genetic test",
+      "Serum screening test",
+      "USG ulang"
+    ],
+    answer: 0,
+    explain: "Diagnosis pasti = amniocentesis."
+  },
+  {
+    q: "79. Apa yang dilakukan untuk mencegah alloimunisasi pada wanita Rh D-negatif setelah keguguran spontan?",
+    options: [
+      "Pemberian acetaminophen",
+      "Istirahat di tempat tidur",
+      "Anti-D immunoglobulin",
+      "Pemberian obat antiinflamasi",
+      "Evakuasi kehamilan"
+    ],
+    answer: 2,
+    explain: "Anti-D."
+  },
+  {
+    q: "82. Mana pernyataan yang benar di bawah ini mengenai pembentukan organ reproduksi pria?",
+    options: [
+      "Mullerian inhibiting substance (MIS) dan testosteron diproduksi oleh sel Sertoli",
+      "Dehidrotestosteron akan membentuk internal genital organs",
+      "Paramesonephric duct akan membentuk vas defferent dan epididymis",
+      "Genital tubercle yang terbentuk nantinya akan menjadi phallus",
+      "Urethral fold yang tidak menutup menyebabkan terjadinya epispadia"
+    ],
+    answer: 3,
+    explain: "Genital tubercle berkembang menjadi phallus."
+  },
+  {
+    q: "83. Berapa rata-rata durasi fase aktif persalinan pada nullipara?",
+    options: ["2.5 jam", "4.9 jam", "8 jam", "11.7 jam", "15 jam"],
+    answer: 3,
+    explain: "Rata-rata 11.7 jam."
+  },
+  {
+    q: "85. Indonesia yang merupakan negara kepulauan menghadapi permasalahan dalam rujukan kasus Obstetri. Seringkali kasus-kasus rujukan setelah tiba di Rumah Sakit mengalami komplikasi korioamnionitis. Manakah pernyataan yang tepat terkait korioamnionitis dan dampaknya dalam persalinan?",
+    options: [
+      "Infeksi pada tahap awal persalinan menyebabkan gangguan persalinan",
+      "Infeksi pada kala II akhir sebagai akibat dari distosia yang terjadi pada kala I",
+      "Korioamnionitis sering dikaitkan dengan partus presipitatus",
+      "Tidak terkait distosia",
+      "Berhubungan dengan KPD dan persalinan lama"
+    ],
+    answer: 0,
+    explain: "Korioamnionitis paling sering berhubungan dengan persalinan prematur, ketuban pecah dini, persalinan lama, penggunaan tembakau, kehamilan nulipara, cairan ketuban bercampur mekonium, beberapa pemeriksaan vagina pasca ketuban pecah, dan pada wanita dengan infeksi bakteri atau virus yang diketahui.."
+  },
+  {
+    q: "87. Nyonya Kadek, 39 tahun, G4P2A1 usia kehamilan 34 minggu. Dirujukbidan karena pada pemeriksaan Leopold II didapatkan kepala di sisikanan Ibu. Penyebab tersering letak lintang adalah sebagai berikut?",
+    options: [
+      "Nuliparitas",
+      "Pemanjangan fase persalinan",
+      "Plasenta previa",
+      "Oligohidramnion",
+      "Ketuban pecah dini"
+    ],
+    answer: 2,
+    explain: "Plasenta previa mengganggu posisi janin sehingga sering menyebabkan letak lintang."
+  },
+  {
+    q: "88. Berapa rentang usia kehamilan pada Partus immaturus?",
+    options: ["20-24 minggu", "24-28 minggu", "28-32 minggu", "32-36 minggu", "36-40 minggu"],
+    answer: 0,
+    explain: "20-24 minggu."
+  },
+  {
+    q: "92. Bila 15 menit setelah bayi lahir dan sudah dilakukan penatalaksanaan aktif persalinan kala tiga plasenta belum lahir, maka tindakan yang pertama kali anda lakukan adalah:",
+    options: [
+      "Memeriksa tanda-tanda vital, mulai memasang infus dan merujuk.",
+      "Melakukan masase fundus dan meminta ibu untuk meneran.",
+      "Lahirkan plasenta secara manual.",
+      "Memberikan 10 unit oksitosin intramuskular",
+      "Memberikan injeksi metylergometrin 1 amp intramuscular"
+    ],
+    answer: 1,
+    explain: "Masase dulu."
+  },
+  {
+    q: "93. Apa peristiwa penting terjadi pada perkembangan minggu kedua dari perkembangan embrio?",
+    options: [
+      "Terbentuknya bilaminar germ disc (Inner cell mass: epiblast and hypoblast",
+      "Terbentuknya trilaminar germ disc (lapisan ektoderm, mesoderm dan endoderm)",
+      "Terbentuknya somites",
+      "Terdapatnya migrasi dari sel untuk membentuk bagian ventral dan dorsal embrio",
+      "Terbentuknya gastrulation"
+    ],
+    answer: 0,
+    explain: "Epiblast dan hypoblast."
+  },
+  {
+    q: "95. Kapan kepala bayi biasanya menetap atau engaged dalam panggul ibu?",
+    options: ["20 minggu", "28 minggu", "32 minggu", "36 minggu", "40 minggu"],
+    answer: 3,
+    explain: "Nullipara ±36 minggu."
+  },
+  {
+    q: "99. Manakah pernyataan dibawah ini benar tentang vas deferens?",
+    options: [
+      "Mukosa dilapisi oleh epitel kolumnar berlapis semu yang memiliki stereocilia, pada luarnya dilapisi oleh otot polos yang tebal dan jaringan ikat",
+      "Mukosa dilapisi oleh epitel kolumnar yang memiliki cilia, pada luarnya dilapisi oleh otot polos yang tebal dan jaringan ikat",
+      "Mukosa dilapisi oleh epitel transisional, pada luarnya dilapisi oleh otot polos yang tebal dan jaringan ikat",
+      "Mukosa dilapisi oleh epitel kolumnar berlapis semu yang memiliki stereocilia, pada luarnya dilapisi oleh etet skelet yang tebal dan jaringan ikat",
+      "Mukosa dilapisi oleh epitel berlapis kolumnar, pada luarnya dilapisi oleh otot polos yang tebal dan jaringan ikat"
+    ],
+    answer: 0,
+    explain: "Ciri khas: stereocilia."
+  }
+];
 
     startBtn.addEventListener("click", startQuiz);
     nextBtn.addEventListener("click", nextQuestion);
